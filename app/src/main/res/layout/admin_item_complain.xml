@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:layout_marginBottom="15dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:id="@+id/tv_post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:paddingEnd="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="end"
+            android:text="Posted on: 18-02-2025 09:21 PM "
+            android:paddingStart="5dp"
+            android:textSize="14sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_complain_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/complaint"
+                android:contentDescription="Guard Icon" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <TextView
+                    android:id="@+id/tv_wing_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A-Wing"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+
+                    android:textColor="@color/darkblue"/>
+                <TextView
+                    android:id="@+id/tv_resident_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: Ramesh Bhai"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/darkblue"/>
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="5dp"
+                    android:text="Title: "
+                    android:textColor="@color/darkblue"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:paddingEnd="2dp"
+            android:text="Description: "
+            android:textColor="@color/darkblue"
+            android:paddingStart="5dp"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:paddingEnd="2dp"
+            android:text="Status: "
+            android:paddingStart="5dp"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:id="@+id/btn_solved"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="Solved"
+            android:background="@drawable/less_round_bg"
+            android:textColor="@color/white"
+            android:backgroundTint="#00B052"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

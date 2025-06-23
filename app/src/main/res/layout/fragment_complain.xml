@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e7dfff"> <!-- Light Purple Background -->
+
+    <RelativeLayout
+        android:id="@+id/load_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#EAE6FA"
+        android:visibility="gone"> <!-- Hidden initially -->
+
+        <!-- ProgressBar for Loading Effect -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:indeterminateTint="@color/darkblue" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="60dp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:orientation="vertical">
+
+            <!-- Complaint Box Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complaint Box"
+                android:textSize="18sp"
+                android:textColor="@color/darkblue"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:paddingBottom="15dp"/>
+
+            <!-- Subject Input -->
+            <EditText
+                android:id="@+id/et_complaint_subject"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Enter Subject of Complaint"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"/>
+
+            <!-- Complaint Details Input -->
+            <EditText
+                android:id="@+id/et_complaint_details"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Enter Your Complaint"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:gravity="top"
+                android:layout_marginTop="15dp"
+                android:inputType="textMultiLine"/>
+
+            <!-- Upload Image Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_edittext"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Upload Image"
+                    android:textSize="16sp"
+                    android:textColor="#777777"/>
+
+                <Button
+                    android:id="@+id/btn_choose_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Upload Image"
+                    android:textSize="14sp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/button_border"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/complaint_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="15dp"
+                android:visibility="gone" />
+<!--            <ProgressBar-->
+<!--                -->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:indeterminateTint="@color/darkblue"-->
+<!--                android:visibility="gone"/>-->
+
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btn_submit_complaint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Your Complaint"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/background_btn_1"
+                android:layout_marginTop="20dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complaint Hisory"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:indeterminateTint="@color/darkblue"
+                android:visibility="gone"/>
+
+            <TextView
+            android:id="@+id/noText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:text="No Complaint Found!"
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"
+            android:visibility="gone"
+            />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_complain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"/>
+
+            </ScrollView>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Bottom Navigation Bar -->
+
+
+</LinearLayout>

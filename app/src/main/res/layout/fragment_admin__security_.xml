@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e7dfff"
+    android:paddingTop="40dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:paddingBottom="16dp">
+    <!-- Hidden initially -->
+
+    <LinearLayout
+        android:id="@+id/main_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Security"
+            android:textSize="20sp"
+            android:textColor="@color/darkblue"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="30dp" />
+
+        <EditText
+            android:id="@+id/etname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_edittext"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:hint="Enter Name" />
+
+        <EditText
+            android:id="@+id/etcontact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter Mobile no"
+            android:padding="12dp"
+            android:gravity="start"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:inputType="number" />
+        <EditText
+        android:id="@+id/etPostion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Enter Postion"
+        android:padding="12dp"
+        android:gravity="start"
+        android:textColor="#000000"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+        android:inputType="text" />
+
+        <ProgressBar
+            android:id="@+id/loading_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/darkblue"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnAddSecurity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/background_btn_1"
+            android:layout_marginTop="20dp"
+            android:text="Add security" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/all_guard_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Security"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/darkblue"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/noNoticeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Past Notice Found!"
+            android:textSize="14sp"
+            android:textColor="@color/darkblue"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/darkblue"
+            android:visibility="gone"
+            />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvallSecurity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>

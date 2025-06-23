@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#5a6cf6</color>
+    <color name="lightblue">#323773</color>
+    <color name="darkgreen">#0B7100</color>
+    <color name="darkblue">#1e4368</color>
+    <color name="colorPressed">#B2C0FF</color> <!-- Color when pressed -->
+    <color name="colorDisabled">#BA3838</color> <!-- Color when disabled -->
+    <color name="colorDefault">#5a6cf6</color> <!-- Default color -->
+</resources>

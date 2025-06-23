@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e7dfff"
+    android:paddingTop="40dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:paddingBottom="16dp">
+    <!-- Hidden initially -->
+
+    <LinearLayout
+        android:id="@+id/main_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amenities"
+            android:textSize="20sp"
+            android:textColor="@color/darkblue"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="30dp" />
+
+        <EditText
+            android:id="@+id/etAmenitiesName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_edittext"
+            android:textSize="16sp"
+            android:inputType="textCapSentences"
+            android:hint="Enter Amenities Name" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Timings"
+            android:textSize="16sp"
+            android:textColor="@color/darkblue"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/etOpenTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter Opening Time"
+            android:padding="12dp"
+            android:gravity="start"
+            android:textColor="#000000"
+            android:textSize="16sp"
+             />
+        <TextView
+            android:id="@+id/etCloseTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter Closing Time"
+            android:padding="12dp"
+            android:gravity="start"
+            android:textColor="#000000"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:inputType="time" />
+
+        <ImageView
+            android:id="@+id/ivAmenitiesImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/amenities" />
+
+        <Button
+            android:id="@+id/btnUploadImage"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_border"
+            android:text="Upload Image" />
+        <ProgressBar
+            android:id="@+id/loading_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/darkblue"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnPublishAmenities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/background_btn_1"
+            android:layout_marginTop="20dp"
+            android:text="Publish Amenities" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Amenities"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/darkblue"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/noText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Amenities Found!"
+            android:textSize="16sp"
+            android:textColor="@color/darkblue"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAllAmenities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>

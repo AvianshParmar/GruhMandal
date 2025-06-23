@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E0FF"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    tools:context=".admin.ResidentFragment">
+
+    <!-- ScrollView to allow scrolling -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="16dp"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Residents"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"
+                android:layout_marginBottom="20dp"
+                />
+
+            <!-- Gender Dropdown -->
+            <TextView
+                android:id="@+id/tvWing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:drawableEnd="@drawable/arrow_drop_down"
+                android:padding="12dp"
+                android:hint="Select Wing"
+                android:textColor="@color/darkblue"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:gravity="center_vertical"
+                />
+
+            <!-- Family Members Title -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:indeterminateTint="@color/darkblue"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/TotalResi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A-Wing: 22 Residents"
+                android:textSize="16sp"
+                android:textColor="@color/darkblue"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/noText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Residents Found!"
+                android:textSize="16sp"
+                android:textColor="@color/darkblue"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+                <!-- List of Family Members -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewResidents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:scrollbars="vertical"/>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Bottom Navigation -->
+
+</LinearLayout>

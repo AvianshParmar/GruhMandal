@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "133921579742",
+    "project_id": "gruh-mandal",
+    "storage_bucket": "gruh-mandal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133921579742:android:b764bbe8b7e5f70390d84f",
+        "android_client_info": {
+          "package_name": "com.example.gruhmandal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASXqI-ynzEVjG4MtifKdEonSozHMmCsNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

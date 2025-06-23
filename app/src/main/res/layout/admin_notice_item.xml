@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/notice_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/notice" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp">
+
+
+                <TextView
+                    android:id="@+id/noticeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detail: "
+                    android:textSize="16sp"
+                    android:textColor="@color/darkblue"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"/>
+
+
+                <TextView
+                    android:id="@+id/noticeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="There is a holi celebration is organizing in our society! on 13th March,so here is the voting for it! If you are agree with us then give a Thumb's Up!"
+                    android:textSize="12sp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/darkblue"
+                    android:fontFamily="@font/poppins_light"/>
+
+
+                <LinearLayout
+                    android:id="@+id/agree_notagree_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtAgreeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Agree: 0"
+                        android:textSize="12sp"
+                        android:textColor="#454545"
+                        android:paddingRight="10dp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/poppins_light" />
+                    <TextView
+                        android:id="@+id/txtNotAgreeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Not Agree: 0"
+                        android:textColor="#454545"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/poppins_light"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/post_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Posted on: 15/03/12 15:40 pm"
+                    android:textColor="#626262"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:includeFontPadding="false"
+                    android:textSize="12sp"/>
+                <Button
+                    android:id="@+id/btnDeactive"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:textAllCaps="false"
+                    android:text="Remove"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="-25dp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:backgroundTint="#FF4747"
+                    android:textColor="#ffffff"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

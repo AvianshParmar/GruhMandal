@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="70dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="#e7dfff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pending Maintenance Bills"
+        android:textSize="20sp"
+        android:textColor="#1e4368"
+        android:fontFamily="@font/poppins_semibold"
+        android:includeFontPadding="false"/>
+    <TextView
+        android:id="@+id/txt_no_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="No Bills Found!"
+        android:textColor="#1e4368"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:includeFontPadding="false"
+        android:visibility="gone"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:indeterminateTint="@color/darkblue"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBills"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="#e7dfff">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleAmenities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amenities"
+        android:fontFamily="@font/poppins_semibold"
+        android:includeFontPadding="false"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/darkblue"
+        />
+
+    <!-- RecyclerView for Dynamic Amenities -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAmenities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleAmenities"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

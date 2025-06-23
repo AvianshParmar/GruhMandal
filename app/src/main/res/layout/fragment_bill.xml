@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E0FF"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    tools:context=".admin.BillFragment">
+
+    <!-- ScrollView to allow scrolling -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="16dp"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Society Maintenance"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"
+                android:layout_marginBottom="20dp"
+                />
+
+            <!-- Input Fields -->
+            <EditText
+                android:id="@+id/st_bill_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Society Maintenance Amount"
+                android:padding="12dp"
+                android:inputType="number"
+                android:maxLength="9"
+                android:drawableStart="@drawable/rupee_indian"
+                android:drawablePadding="8dp"
+                android:background="@drawable/rounded_edittext"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/st_Due"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Due Date"
+                android:textColor="@color/black"
+                android:padding="12dp"
+                android:drawableStart="@drawable/calendar"
+                android:drawablePadding="10dp"
+                android:background="@drawable/rounded_edittext"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:layout_marginTop="15dp"  />
+
+            <!-- Add Member Button -->
+            <Button
+                android:id="@+id/st_generate_bill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generate Bill"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/background_btn_1"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:layout_marginTop="18dp" />
+
+            <!-- Family Members Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Residents Maintenance Status"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textColor="@color/darkblue"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/st_fetch_Due"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Due Date"
+                android:textColor="@color/black"
+                android:padding="12dp"
+                android:drawableStart="@drawable/calendar"
+                android:drawablePadding="10dp"
+                android:background="@drawable/rounded_edittext"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:layout_marginTop="5dp"  />
+
+            <TextView
+                android:id="@+id/no_bill_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No bills found!"
+                android:textColor="@color/darkblue"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:textSize="17sp"
+                android:layout_marginTop="6dp"
+                android:padding="10dp"
+                android:visibility="gone"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+                <!-- List of Family Members -->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_society_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"/>
+            </ScrollView>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:indeterminateTint="@color/darkblue"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
+
