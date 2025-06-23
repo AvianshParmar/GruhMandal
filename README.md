@@ -81,7 +81,7 @@
 ## 🧑‍💻 Developer
 
 - 👨‍💻 **Avinash Parmar**  
-  📧 *avinash@example.com*  
+  📧 *avinashparmar787@gmail.com*  
   🌐 [LinkedIn](www.linkedin.com/in/avinashparmar117) | [GitHub](https://github.com/AvinashParmar)
 
 ---
